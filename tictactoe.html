@@ -1,0 +1,87 @@
+<html>
+
+<head>
+  <title>Tic Tac Toe</title>
+
+  <script>
+    var chosenSymbol = 'x';
+
+    function chooseX() {
+      chosenSymbol = 'x';
+   //alert("chosenSymbol:  " + chosenSymbol);
+    }
+
+    function chooseO() {
+      chosenSymbol = 'o';
+   //alert("chosenSymbol:  " + chosenSymbol);
+    }
+    function MakeMove(divId){
+     if(document.getElementById(divId).innerHTML == ""){
+      document.getElementById(divId).innerHTML=chosenSymbol;  
+     }
+    
+      if(chosenSymbol == 'x'){
+      chosenSymbol = 'o';
+    }
+      {
+        else{
+          chosenSymbol = 'x';
+        }
+      }
+      
+      switchSymbols();
+      
+      checkWinner();
+    }
+    function checkWinner(){
+      var row1col1 = document.getElementById("row1col1").innerHTML;
+      var row1col2 = document.getElementById("row1col2").innerHTML;
+      var row1col3 = document.getElementById("row1col3").innerHTML;
+      var row2col1 = document.getElementById("row2col1").innerHTML;
+      var row2col2 = document.getElementById("row2col2").innerHTML;
+      var row2col3 = document.getElementById("row2col3").innerHTML;
+      var row3col1 = document.getElementById("row3col1").innerHTML;
+      var row3col2 = document.getElementById("row3col2").innerHTML;
+      var row3col3 = document.getElementById("row3col3").innerHTML;
+      
+      if(row1col1 == row2col1 && row1col1 == row3col1 && row1col1 != ""){
+        alert(chosensymbol + "wins!");
+      }
+      
+      }
+  </script>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+</head>
+
+<body>
+  <div id="container">
+
+    <p id="nav">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="project.html">Projects</a>
+    </p>
+    <div id="TicTacToeGame">
+      <input type="button" value="X" onclick="chooseX()" />
+      <input type="button" value="O" onclick="chooseO()" />
+      <div id="notes">
+        Choose X or O to begin.
+      </div>
+      <div id="TicTacToeBoard">
+        <div class="box" id="row1col1" onclick="MakeMove('row1col1')"></div>
+        <div class="box" id="row1col2" onclick="MakeMove('row1col2')"></div>
+        <div class="box" id="row1col3" onclick="MakeMove('row1col3')"></div>
+        <div class="box" id="row2col1" onclick="MakeMove('row2col1')"></div>
+        <div class="box" id="row2col2" onclick="MakeMove('row2col2')"></div>
+        <div class="box" id="row2col3" onclick="MakeMove('row2col3')"></div>
+        <div class="box" id="row3col1" onclick="MakeMove('row3col1')"></div>
+        <div class="box" id="row3col2" onclick="MakeMove('row3col2')"></div>
+        <div class="box" id="row3col3" onclick="MakeMove('row3col3')"></div>
+      </div>
+    </div>
+    Tic Tac Toe
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+
+body{
+  background-color:#0c47ff;color:pink;
+}
+
+#container{
+  background-color:#ffc40c;
+  color:black;
+  margin:25px;padding:25px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.centered{text-align:center;}
+img{
+  width:150px;
+
+}
+
+ul{
+  list-style-type:none;
+}
+#TicTacToeBoard{
+  margin: 0 auto;
+  width:350px;
+  height:350px;
+text-align:center;
+}
+
+.box{
+  border-style:solid;
+  float:left;
+  text-align:center;
+  line-height:100px;
+  vertical-align:middle;
+  height:100px;
+  width:100px;
+  background-color:white;
+}

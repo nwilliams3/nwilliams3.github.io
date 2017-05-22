@@ -1,8 +1,41 @@
 <html>
-  <head>
-    <title>hi</title>
-  </head>  
-  <body>
-    god is dead and spongebob killed him!
-  </body>
+
+<head>
+  <title>hi</title>
+  <script>
+    function changePic() {
+      image1 = "http://i0.kym-cdn.com/entries/icons/original/000/012/108/tumblr_lyqt5cAy851qh9y1k.gif";
+      image2 = "https://pbs.twimg.com/profile_images/699298090726137856/qf0Bojgj.png";
+      image3 = "https://media.giphy.com/media/UTGKzhtWSQS3K/giphy.gif";
+      if (document.getElementById("test").src == image1) {
+        document.getElementById("test").src = image2;
+      } else if (document.getElementById("test").src == image2) {
+        document.getElementById("test").src = image3;
+      } else if (document.getElementById("test").src == image3) {
+        document.getElementById("test").src = image1;
+      }
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<body>
+  <div id="container" class="centered">
+    <p id="nav">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="project.html">Projects</a>
+    </p>
+    <h1>
+     hello
+    </h1>
+    <a href="http://www.zombo.com/" /> ZOMBO COM IS LOVE ZOMBO COM IS LIFE </a>
+    <br/>
+    <br/>
+    <img id="test" style="width:400px;height:400px" src="https://pbs.twimg.com/profile_images/699298090726137856/qf0Bojgj.png" />
+    <p>
+      <input type="button" value="click for spicy meme" onclick="changePic();" />
+    </p>
+  </div>
+</body>
 </html>
